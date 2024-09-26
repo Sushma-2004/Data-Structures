@@ -40,7 +40,11 @@ public class QueueUsingLLMain {
           System.out.println(isEmpty);
           break;
         case 5:
-          list.display();
+          list.iterator();
+          for(int a:list){
+            System.out.print(a+" ");
+          }
+          System.out.println();
           break;  
         case 6:
           System.out.println("Exiting....");

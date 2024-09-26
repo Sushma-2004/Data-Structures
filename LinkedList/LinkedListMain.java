@@ -18,7 +18,8 @@ public class LinkedListMain {
         System.out.println("5. Delete at the end of the List.");
         System.out.println("6. Delete at the Specific position.");
         System.out.println("7. Display List elements.");
-        System.out.println("8. Exit");
+        System.out.println("8. Reverse List elements.");
+        System.out.println("9. Exit");
         System.out.println("-----------------------------------------------------");
         System.out.print("Enter your choice: ");
         int choice = sc.nextInt();
@@ -55,9 +56,21 @@ public class LinkedListMain {
             list.deleteAtPos(pos);
             break;
           case 7:
-            list.display();
+            list.iterator();
+            for(int a: list){
+              System.out.print(a + " ");
+            }
+            System.out.println();
             break;
           case 8:
+            list.reverse();
+            list.iterator();
+            for(int a: list){
+              System.out.print(a + " ");
+            }
+            System.out.println();
+            break;  
+          case 9:
             System.out.println("Exiting....");
             System.exit(0);
           default:

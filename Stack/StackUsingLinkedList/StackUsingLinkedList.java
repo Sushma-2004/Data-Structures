@@ -1,6 +1,6 @@
 package Stack.StackUsingLinkedList;
-
-public class StackUsingLinkedList<T> {
+import java.util.Iterator;
+public class StackUsingLinkedList<T> implements Iterable<T>{
   public class Node{
     T data;
     Node next;
@@ -42,6 +42,22 @@ public class StackUsingLinkedList<T> {
       temp = temp.next;
     }
     System.out.println();
+  }
+
+  public Iterator<T> iterator() {
+    return new Iterator<T>() {
+      Node temp = top;
+
+      public boolean hasNext() {
+        return temp != null;
+      }
+
+      public T next() {
+        T val = temp.data;
+        temp = temp.next;
+        return val;
+      }
+    };
   }
 
   public boolean isEmpty(){

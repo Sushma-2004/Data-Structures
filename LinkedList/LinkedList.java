@@ -4,17 +4,17 @@ import java.util.Iterator;
 
 public class LinkedList<T> implements Iterable<T> {
   Node head;
-
+  
   public class Node {
     T data;
     Node next;
-
+    
     Node(T val) {
       data = val;
       next = null;
     }
   }
-
+  
   LinkedList() {
     head = null;
   }
@@ -115,13 +115,8 @@ public class LinkedList<T> implements Iterable<T> {
 
   }
 
-  public void display() {
-    Node temp = head;
-    while (temp != null) {
-      System.out.print(temp.data + " ");
-      temp = temp.next;
-    }
-    System.out.println();
+  public void reverse(){
+     
   }
 
   public Iterator<T> iterator() {

@@ -1,6 +1,7 @@
 package Queue.QueueUsingLL;
+import java.util.Iterator;
 
-public class QueueUsingLL<T> {
+public class QueueUsingLL<T> implements Iterable<T>{
   public class Node {
     T data;
     Node next;
@@ -46,6 +47,22 @@ public class QueueUsingLL<T> {
       temp = temp.next;
     }
     System.out.println();
+  }
+
+  public Iterator<T> iterator() {
+    return new Iterator<T>() {
+      Node temp = front;
+
+      public boolean hasNext() {
+        return temp != null;
+      }
+
+      public T next() {
+        T val = temp.data;
+        temp = temp.next;
+        return val;
+      }
+    };
   }
 
   public T peek() {
