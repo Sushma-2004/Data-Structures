@@ -1,4 +1,4 @@
-package Stack;
+package Stack.StackUsingLinkedList;
 
 public class StackUsingLinkedList<T> {
   public class Node{
@@ -33,6 +33,15 @@ public class StackUsingLinkedList<T> {
       throw new IndexOutOfBoundsException("Empty Stack");
      }
      return top.data;
+  }
+
+  public void display() {
+    Node temp = top;
+    while (temp != null) {
+      System.out.print(temp.data + " ");
+      temp = temp.next;
+    }
+    System.out.println();
   }
 
   public boolean isEmpty(){

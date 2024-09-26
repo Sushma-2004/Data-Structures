@@ -1,4 +1,4 @@
-package Stack;
+package Stack.ArrayStack;
 
 public class ArrayStack<T> {
   static final int MAX_SIZE = 50;
@@ -33,6 +33,13 @@ public class ArrayStack<T> {
 
   public boolean isEmpty(){
     return top==-1;
+  }
+
+  public void display(){
+    for(int i = 0;i<top;i++){
+      System.out.print(arr[i] + " ");
+    }
+    System.out.println();
   }
 
 }
